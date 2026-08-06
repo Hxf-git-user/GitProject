@@ -73,3 +73,11 @@ html_doc = """
 </html>
 """
 
+soup = BeautifulSoup(html_doc,'html.parser')
+
+print(soup.title)
+print(soup.title.string)
+print(soup.p)
+print(soup.a)
+print(soup.find_all('a'))
+
