@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 import time
+from lxml import etree
 
 def simple_crawler(url):
     headers = {
@@ -93,4 +94,21 @@ for link in links:
 print(soup.find_all('a',class_='sister'))
 import re
 print(soup.find_all(text=re.compile("Tillie")))
+
+html = """
+<html>
+<head><title>网页标题</title></head>
+<body>
+<div class="content">
+   <ul>
+      <li class="item-0"><a href="link1.html">第一个</a></li>
+      <li class="item-1"><a href="link2.html">第二个</a></li>
+      <li class="item-2"><a href="link3.html">第三个</a></li>
+      <li class="item-3"><a href="link4.html">第四个</a></li>
+      <li class="item-4"><a href="link5.html">第五个</a></li>
+   </ul>
+</div>
+</body>
+</html>
+"""
 
