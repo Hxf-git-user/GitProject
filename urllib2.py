@@ -80,4 +80,17 @@ print(soup.title.string)
 print(soup.p)
 print(soup.a)
 print(soup.find_all('a'))
+print(soup.find(id="link3"))
+
+links = soup.find_all('a')
+for link in links:
+    print(link.get('href'))
+
+links = soup.select('p a.sister')
+for link in links:
+    print(link['href'])
+
+print(soup.find_all('a',class_='sister'))
+import re
+print(soup.find_all(text=re.compile("Tillie")))
 
