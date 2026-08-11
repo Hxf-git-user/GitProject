@@ -118,3 +118,6 @@ new_div.string = "这是新添加的div"
 print(soup.prettify())
 
 tree = etree.HTML(html)
+
+li_elements = tree.xpath('//li')
+print(f"共找到 {len(li_elements)} 个li元素")
