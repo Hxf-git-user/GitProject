@@ -118,3 +118,5 @@ new_div.string = "这是新添加的div"
 print(soup.prettify())
 
 tree = etree.HTML(html)
+
+links = tree.xpath('//a/@href')
