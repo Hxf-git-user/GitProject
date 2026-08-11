@@ -119,5 +119,9 @@ print(soup.prettify())
 
 tree = etree.HTML(html)
 
+
 li_elements = tree.xpath('//li')
 print(f"共找到 {len(li_elements)} 个li元素")
+
+links = tree.xpath('//a/@href')
+
