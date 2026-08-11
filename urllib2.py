@@ -111,4 +111,9 @@ html = """
 </body>
 </html>
 """
+soup.title.string = "新标题"
+soup.body.append(soup.new_tag('div',id='new_div'))
+new_div = soup.find(id='new_div')
+new_div.string = "这是新添加的div"
+print(soup.prettify())
 
