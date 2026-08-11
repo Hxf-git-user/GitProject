@@ -117,3 +117,4 @@ new_div = soup.find(id='new_div')
 new_div.string = "这是新添加的div"
 print(soup.prettify())
 
+tree = etree.HTML(html)
