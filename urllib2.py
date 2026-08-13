@@ -124,4 +124,16 @@ li_elements = tree.xpath('//li')
 print(f"共找到 {len(li_elements)} 个li元素")
 
 links = tree.xpath('//a/@href')
+print(links)
+
+text = tree.xpath('//a/text()')
+print(text)
+
+items = tree.xpath('//li[@class="item-0"]')
+for item in items:
+    link = item.xpath('./a/text()')[0]
+    href = item.xpath('./a/@href')[0]
+    print(f"{link} -> {href}")
+
+
 
