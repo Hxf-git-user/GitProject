@@ -138,4 +138,7 @@ for item in items:
 third_item = tree.xpath('//li[3]')
 print(etree.tostring(third_item[0],encoding='utf-8').decode('utf-8'))
 
+items = tree.xpath('//li[contains(@class, "item-")]')
+print(f"匹配的元素数量:{len(items)}")
+
 
