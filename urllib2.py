@@ -135,5 +135,7 @@ for item in items:
     href = item.xpath('./a/@href')[0]
     print(f"{link} -> {href}")
 
+third_item = tree.xpath('//li[3]')
+print(etree.tostring(third_item[0],encoding='utf-8').decode('utf-8'))
 
 
